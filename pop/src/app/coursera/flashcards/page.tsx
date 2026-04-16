@@ -289,7 +289,7 @@ export default function CourseraFlashcardsPage() {
 
                         <div className="flex items-start gap-6 mb-6">
                           <div className={`w-16 h-16 rounded flex items-center justify-center border ${set.theme} shrink-0 group-hover:scale-105 transition-transform shadow-sm`}>
-                            {set.icon}
+                            {React.cloneElement((categories.find(c => c.id === set.category)?.icon || <BookOpen />) as any, { size: 32 })}
                           </div>
                           <div className="space-y-1">
                             <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{set.institution}</div>
