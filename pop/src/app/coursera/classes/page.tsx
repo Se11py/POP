@@ -126,7 +126,7 @@ export default function CourseraClassesPage() {
   const filteredClasses = initialClassesData.filter(cls => {
     const matchesCategory = activeCategory === 'All' || cls.category === activeCategory;
     const matchesSearch = cls.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         cls.description.toLowerCase().includes(searchQuery.toLowerCase());
+                         (cls.description || "").toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
