@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8B5CF6;
+  --color-primary-light: #A78BFA;
+  --color-primary-dark: #7B2FF2;
+  
+  --color-accent: #F357A8;
+  
+  --color-dark: #0F0F1E;
+  --color-dark-surface: #1A1A2E;
+  --color-dark-tertiary: #252538;
+  
+  --color-coral: #FF6B6B;
+  --color-teal: #4ECDC4;
+  --color-sky: #45B7D1;
+  --color-sage: #96CEB4;
+  --color-gold: #FFD93D;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-poppins: 'Inter', sans-serif;
+}
+
+:root {
+  /* Brand Colors - Standardized */
+  --primary: #7B2FF2;    /* Primary violet - matches brand */
+  --primary-light: #A78BFA;
+  --secondary: #F357A8;  /* Secondary pink */
+  --accent: #00C6FB;     /* Accent cyan */
+  
+  /* Extended Color Palette */
+  --coral: #FF6B6B;      /* Energetic red */
+  --teal: #4ECDC4;       /* Trustworthy teal */
+  --sky: #45B7D1;        /* Professional blue */
+  --sage: #96CEB4;       /* Success green */
+  --gold: #FFD93D;       /* Achievement gold */
+  --purple-light: #A78BFA; /* Light purple */
+  
+  /* Dark Theme Colors */
+  --bg-primary: #0F0F1E;      /* Main background */
+  --bg-secondary: #1A1A2E;    /* Card backgrounds */
+  --bg-tertiary: #252538;     /* Hover states */
+  --dark: #151730;
+  --dark-surface: #1E1E2D;
+  --card-bg: #1B1A2E;
+  --text-primary: #FFFFFF;    /* Main text */
+  --text-secondary: #E2E8F0;  /* Secondary text */
+  --text-tertiary: #94A3B8;   /* Muted text */
+  --text-dark: #8E8EA0;
+  --text-light: #FFFFFF;
+  --border-color: #2D2A3A;
+  
+  /* Professional Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--coral) 0%, var(--teal) 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  --primary-gradient: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  --create-set-gradient: linear-gradient(90deg, #EC4899 0%, #D946EF 100%);
+  --bg-gradient: linear-gradient(135deg, var(--dark) 0%, #23174B 100%);
+  --btn-gradient: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  
+  /* Transitions */
+  --transition: all 0.3s ease;
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  /* Base styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, white, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Navigation specific */
+  .navbar {
+    width: 100%;
+    background: var(--background-light, #fff);
+    box-shadow: 0 2px 12px 0 #0001;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .sign-in-btn {
+    background: linear-gradient(90deg, #7C3AED 0%, #3B82F6 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .sign-in-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.6);
+  }
+}
