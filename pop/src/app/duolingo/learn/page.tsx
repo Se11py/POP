@@ -16,6 +16,7 @@ import {
   Target,
   Bookmark,
   Sparkles,
+  BookOpen,
   Copy,
   ExternalLink,
   Check
