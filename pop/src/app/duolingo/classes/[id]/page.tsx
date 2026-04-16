@@ -345,7 +345,7 @@ export default function ClassDetailPage() {
                 <p className="text-xl font-bold text-slate-500 leading-relaxed max-w-xl mx-auto md:mx-0">{classDetail.description}</p>
               </div>
               <div className={`w-32 h-32 md:w-48 md:h-48 rounded-[32px] md:rounded-[40px] ${classDetail.iconBg} flex items-center justify-center border-b-[8px] md:border-b-[12px] border-black/10 shadow-xl shrink-0 mx-auto md:mx-0`}>
-                {React.cloneElement(classDetail.icon as React.ReactElement, { className: "text-white w-16 h-16 md:w-24 md:h-24", strokeWidth: 2.5 })}
+                {React.cloneElement(classDetail.icon as any, { className: "text-white w-16 h-16 md:w-24 md:h-24", strokeWidth: 2.5 })}
               </div>
             </div>
           </motion.div>

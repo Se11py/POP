@@ -107,7 +107,7 @@ export default function CourseraPhysicsRushDashboard() {
             ].map((stat, i) => (
               <div key={i} className="bg-white p-8 rounded-lg border border-gray-200 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow">
                 <div className={`w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 ${stat.color}`}>
-                  {React.cloneElement(stat.icon as React.ReactElement, { size: 24 })}
+                  {React.cloneElement(stat.icon as any, { size: 24 })}
                 </div>
                 <span className="text-3xl font-bold text-gray-900 font-serif">{stat.value}</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">{stat.label}</span>

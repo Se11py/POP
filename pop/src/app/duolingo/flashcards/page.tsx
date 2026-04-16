@@ -270,7 +270,7 @@ export default function FlashcardsPage() {
                   }`}
                 >
                   <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activeCategory === cat.id ? cat.iconBg : 'bg-slate-100'} transition-colors`}>
-                    {React.cloneElement(cat.icon as React.ReactElement, { size: 14, className: activeCategory === cat.id ? "text-white" : "text-slate-400" })}
+                    {React.cloneElement(cat.icon as any, { size: 14, className: activeCategory === cat.id ? "text-white" : "text-slate-400" })}
                   </div>
                   {cat.id}
                 </button>

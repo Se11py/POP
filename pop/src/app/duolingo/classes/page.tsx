@@ -232,7 +232,7 @@ export default function ClassesPage() {
                   }`}
                 >
                   <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activeCategory === cat.id ? cat.iconBg : 'bg-slate-100'} transition-colors`}>
-                    {React.cloneElement(cat.icon as React.ReactElement, { size: 14, className: activeCategory === cat.id ? "text-white" : "text-slate-400" })}
+                    {React.cloneElement(cat.icon as any, { size: 14, className: activeCategory === cat.id ? "text-white" : "text-slate-400" })}
                   </div>
                   {cat.id}
                 </button>
@@ -269,7 +269,7 @@ export default function ClassesPage() {
                         {/* Subject Icon & Tag */}
                         <div className="flex justify-between items-start mb-8 relative z-10">
                           <div className={`w-16 h-16 rounded-[20px] ${cls.iconBg} flex items-center justify-center border-b-[4px] border-black/10 shadow-sm group-hover:scale-110 transition-transform`}>
-                            {React.cloneElement(cls.subjectIcon as React.ReactElement, { className: "text-white", size: 32 })}
+                            {React.cloneElement(cls.subjectIcon as any, { className: "text-white", size: 32 })}
                           </div>
                           <div className="flex flex-col items-end gap-2">
                             <span className={`px-4 py-1.5 bg-white/60 backdrop-blur-sm rounded-xl text-[10px] font-black uppercase tracking-widest ${cls.textColor} border-2 border-white/50`}>

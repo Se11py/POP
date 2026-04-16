@@ -275,7 +275,7 @@ export default function DiscordDefinitionLibrary() {
                          selectedWord.subject === 'Physics' ? 'bg-[#5865F2]' : 
                          selectedWord.subject === 'Chemistry' ? 'bg-[#23A559]' : 'bg-[#FEE75C]'
                        }`}>
-                          {React.cloneElement(getSubjectIcon(selectedWord.subject) as React.ReactElement, { size: 40, className: "text-white" })}
+                          {React.cloneElement(getSubjectIcon(selectedWord.subject) as any, { size: 40, className: "text-white" })}
                        </div>
                     </div>
                   </div>

@@ -270,7 +270,7 @@ export default function CourseraClassesPage() {
 
                         <div className="flex items-start gap-6 mb-8">
                           <div className={`w-16 h-16 rounded flex items-center justify-center border ${cls.theme} shrink-0 group-hover:scale-105 transition-transform shadow-sm`}>
-                            {React.cloneElement(cls.subjectIcon as React.ReactElement, { className: cls.textColor, size: 32 })}
+                            {React.cloneElement(cls.subjectIcon as any, { className: cls.textColor, size: 32 })}
                           </div>
                           <div className="space-y-1">
                             <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{cls.institution}</div>

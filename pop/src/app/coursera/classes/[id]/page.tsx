@@ -300,7 +300,7 @@ export default function CourseraClassDetailPage() {
           {/* Professional Module Header */}
           <motion.div variants={fadeInUp} className="bg-white border border-gray-200 rounded-lg p-10 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-5">
-               {React.cloneElement(classDetail.icon as React.ReactElement, { size: 180 })}
+               {React.cloneElement(classDetail.icon as any, { size: 180 })}
             </div>
             
             <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start justify-between">

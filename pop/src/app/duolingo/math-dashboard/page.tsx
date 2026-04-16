@@ -129,7 +129,7 @@ export default function MathDashboard() {
             ].map((stat, i) => (
               <div key={i} className={`p-8 rounded-[40px] border-2 border-b-[8px] ${stat.theme} flex items-center gap-6 group hover:-translate-y-1 transition-transform`}>
                 <div className="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-sm border-2 border-slate-100 group-hover:scale-110 transition-transform">
-                  {React.cloneElement(stat.icon as React.ReactElement, { size: 32 })}
+                  {React.cloneElement(stat.icon as any, { size: 32 })}
                 </div>
                 <div>
                   <p className="text-3xl font-black text-slate-800 leading-none">{stat.value}</p>

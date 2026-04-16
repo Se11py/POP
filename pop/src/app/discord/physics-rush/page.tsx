@@ -96,7 +96,7 @@ export default function DiscordPhysicsRushDashboard() {
             ].map((stat, i) => (
               <div key={i} className="bg-[#2B2D31] p-6 rounded-[12px] border border-[#1E1F22] flex flex-col items-center text-center gap-2 hover:bg-[#35373C] transition-colors group cursor-pointer">
                 <div className={`w-10 h-10 rounded-[8px] ${stat.color} text-white flex items-center justify-center shadow-lg mb-2 group-hover:scale-110 transition-transform`}>
-                  {React.cloneElement(stat.icon as React.ReactElement, { size: 20 })}
+                  {React.cloneElement(stat.icon as any, { size: 20 })}
                 </div>
                 <span className="text-2xl font-extrabold text-white">{stat.value}</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#80848E]">{stat.label}</span>

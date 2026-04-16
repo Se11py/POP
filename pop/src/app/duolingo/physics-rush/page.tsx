@@ -113,7 +113,7 @@ export default function PhysicsRushDashboard() {
             ].map((stat, i) => (
               <div key={i} className={`p-6 rounded-[32px] border-2 border-b-[6px] ${stat.theme} flex flex-col items-center text-center gap-2 hover:-translate-y-1 transition-transform`}>
                 <div className={`w-12 h-12 rounded-2xl ${stat.color} text-white flex items-center justify-center shadow-sm mb-2`}>
-                  {React.cloneElement(stat.icon as React.ReactElement, { size: 24 })}
+                  {React.cloneElement(stat.icon as any, { size: 24 })}
                 </div>
                 <span className="text-3xl font-black text-slate-800">{stat.value}</span>
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{stat.label}</span>
